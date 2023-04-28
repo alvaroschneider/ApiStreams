@@ -15,7 +15,9 @@ public class ApiRestStreams {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hola Mundo java 2");
+        System.out.println("Hola Mundo - es un consume api rest");
+        
+        
     }
     
 }

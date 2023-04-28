@@ -26,7 +26,11 @@ public class Main {
             // Parsea el JSON y obtiene el JSONObject
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(json);
+            JSONArray jsonArray = (JSONArray) jsonObject.get("casa");
             
+            System.out.println("jsonArray: "+ jsonArray.toString());
+            
+            /*
             // Obtiene los valores del JSONObject
             String name = (String) jsonObject.get("name");
             long age = (long) jsonObject.get("age");
@@ -41,26 +45,8 @@ public class Main {
                 hobbiesList.add((String) hobbiesArray.get(i));
             }
             
-            List<JSONObject> listJson = new ArrayList<JSONObject>();
-            /*
-            JSONObject jsonObject = new JSONObject("MyJSON");
-JSONArray jsonArray = jsonObject.getJSONArray("lstOfficialDocuments");
-CargarArray(jsonArray);
 
-
-public void CargarArray(JSONArray jsonArray){
-ArrayList<String> Lista = new ArrayList<>();
-    for(int i=0;i<jsonArray.length();i++){
-        try {
-            JSONObject json = jsonArray.getJSONObject(i);
-            //Aquí se obtiene el dato y es guardado en una lista
-            Lista.add(json.getString("name"));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-}
-            */
+            
             
             // Imprime los valores del JSONObject
             System.out.println("Name: " + name);
@@ -70,6 +56,8 @@ ArrayList<String> Lista = new ArrayList<>();
             System.out.println("City: " + city);
             System.out.println("Country: " + country);
             System.out.println("Hobbies: " + hobbiesList.toString());
+            */
+            
         } catch (Exception e) {
             System.out.println("Ocurrió un error: " + e.getMessage());
         }
