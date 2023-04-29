@@ -14,14 +14,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ConsumeApi {
+public class ConsumeApiGames {
 
-    public String getJsonCustom(String url) {
+    public String getJsonCotizaciones() {
         String json = "1";
         try {
             // URL del API que deseas consumir
             //String url = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
-            //String url = "https://api.rawg.io/api/platforms?key=bf61e2970a4d4af8b77dac08fbc273f4";
+            String url = "https://api.rawg.io/api/platforms?key=bf61e2970a4d4af8b77dac08fbc273f4";
 
             // Crea una conexión HTTP con la URL
             HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();

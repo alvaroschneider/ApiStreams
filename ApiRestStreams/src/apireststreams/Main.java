@@ -12,12 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
-import controladores.ConsumeApi;
+import controladores.ConsumeApiGames;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            ConsumeApi ca = new ConsumeApi();
+            ConsumeApiGames ca = new ConsumeApiGames();
             // JSON de ejemplo
             //String json = "{\"name\": \"Juan\", \"age\": 30, \"isStudent\": true, \"address\": {\"street\": \"Calle 123\", \"city\": \"Bogotá\", \"country\": \"Colombia\"}, \"hobbies\": [\"football\", \"reading\", \"traveling\"]}";
             String json = ca.getJsonCotizaciones();
