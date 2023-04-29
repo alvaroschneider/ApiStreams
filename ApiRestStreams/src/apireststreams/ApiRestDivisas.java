@@ -24,18 +24,24 @@ public class ApiRestDivisas {
 
         String json = ca.getJsonCustom("https://www.dolarsi.com/api/api.php?type=valoresprincipales");
         //String json = ca.getJsonCustom("https://api.rawg.io/api/platforms?key=bf61e2970a4d4af8b77dac08fbc273f4");
-        //json = json.replace("[", "");
-        //json = json.replace("]", "");
-        //System.out.println("replace: " + json);
-        //json = json.trim();
-        //System.out.println("trim: " + json);
+
+        //0 = Dolar oficial
+        //1 = Dolar Blue
+        //3 = Dolar Soja
+        //4 = Dolar contado con liqui
+        //5 = Dolar bolsa
+        //6 = Bitcoin
+        //7 = Dolar turista
+        //8 = Dolar
         
         JSONArray casasCambio = new JSONArray(json);
-        JSONObject jsonObject = casasCambio.getJSONObject(0);
+        JSONObject jsonObject = casasCambio.getJSONObject(1);
         JSONObject jsonObjectChild = jsonObject.getJSONObject("casa");
         System.out.println(jsonObjectChild.toString());
         //convert json results to array
-        System.out.println("compra: "+jsonObjectChild.getString("nombre"));
+        System.out.println("nombre: "+jsonObjectChild.getString("nombre"));
+        System.out.println("compra: "+jsonObjectChild.getString("compra"));
+        System.out.println("venta: "+jsonObjectChild.getString("venta"));
         
     }
 
