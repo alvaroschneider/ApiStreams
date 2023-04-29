@@ -31,20 +31,12 @@ public class ApiRestDivisas {
         //System.out.println("trim: " + json);
         
         JSONArray casasCambio = new JSONArray(json);
-        
-        JSONObject jsonObject = new JSONObject(json);
-        System.out.println("jsonObject: " + jsonObject.toString());
+        JSONObject jsonObject = casasCambio.getJSONObject(0);
+        JSONObject jsonObjectChild = jsonObject.getJSONObject("casa");
+        System.out.println(jsonObjectChild.toString());
         //convert json results to array
-        org.json.JSONArray jsonArray = jsonObject.getJSONArray("casa");
-
-        //from jsonArray name PC get games names
-        JSONObject jsonObject2 = jsonArray.getJSONObject(0);
-        //get games names
-        JSONArray jsonArray2 = jsonObject2.getJSONArray("casa");
-        //iterate over jsonArray2 and print names
-        for (int i = 0; i < jsonArray2.length(); i++) {
-            System.out.println(jsonArray2.getJSONObject(i).getString("nombre"));
-        }
+        System.out.println("compra: "+jsonObjectChild.getString("nombre"));
+        
     }
 
 }
